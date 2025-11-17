@@ -126,7 +126,7 @@ export default function EnquireForm({ onClose }: Props) {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-sm">
-          <div className="relative w-11/12 max-w-lg bg-white rounded-sm shadow-lg font-dm-sans animate-modalFadeIn">
+          <div className="relative w-[100%] max-w-xl bg-white rounded-sm shadow-lg font-dm-sans animate-modalFadeIn">
             {/* Top Border */}
             <div
               className={`w-full h-1 ${
@@ -187,7 +187,7 @@ export default function EnquireForm({ onClose }: Props) {
       </button>
 
       {/* Form */}
-      <h2 className="text-3xl font-semibold mb-4">Submit an Enquiry</h2>
+      <h2 className="text-3xl font-semibold mb-2 mt-5">Submit an Enquiry</h2>
       <p className="mb-4 text-sm text-gray-600">
         Ask us about our services, partnerships, or any business-related
         questions.
@@ -204,7 +204,7 @@ export default function EnquireForm({ onClose }: Props) {
             placeholder="e.g. Maya Verma"
             value={name}
             onChange={(e) => handleChange("name", e.target.value)}
-            className={`w-[95%] border rounded-md font-dm-sans px-3 py-2 text-sm focus:outline-none focus:ring-2 ${
+            className={`w-[100%] border rounded-md font-dm-sans px-3 py-2 text-2xl focus:outline-none focus:ring-2 ${
               errors.name
                 ? "border-red-500 focus:ring-red-500"
                 : "border-gray-400 focus:ring-gray-900"
@@ -225,7 +225,7 @@ export default function EnquireForm({ onClose }: Props) {
             placeholder="e.g. your@example.com"
             value={email}
             onChange={(e) => handleChange("email", e.target.value)}
-            className={`w-[95%] border rounded-md font-dm-sans px-3 py-2 text-sm focus:outline-none focus:ring-2 ${
+            className={`w-[100%] border rounded-md font-dm-sans px-3 py-2 text-2xl focus:outline-none focus:ring-2 ${
               errors.email
                 ? "border-red-500 focus:ring-red-500"
                 : "border-gray-400 focus:ring-gray-900"
@@ -244,7 +244,7 @@ export default function EnquireForm({ onClose }: Props) {
           <select
             value={enquiryType}
             onChange={(e) => handleChange("enquiryType", e.target.value)}
-            className={`w-full border rounded-md px-1 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+            className={`w-full border rounded-md px-1 py-2 text-2xl font-dm-sans focus:outline-none focus:ring-2 ${
               errors.enquiryType
                 ? "border-red-500 focus:ring-red-500"
                 : "border-gray-400 focus:ring-gray-900"
@@ -275,7 +275,7 @@ export default function EnquireForm({ onClose }: Props) {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             rows={4}
-            className={`w-[95%] border rounded-md font-dm-sans px-3 py-2 text-sm focus:outline-none focus:ring-2 ${
+            className={`w-[100%] border rounded-md font-dm-sans px-3 py-2 text-2xl focus:outline-none focus:ring-2 ${
               errors.description
                 ? "border-red-500 focus:ring-red-500"
                 : "border-gray-400 focus:ring-gray-900"
@@ -291,7 +291,7 @@ export default function EnquireForm({ onClose }: Props) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="bg-gray-800 text-white font-dm-sans font-medium px-5 py-2 rounded-md cursor-pointer text-sm hover:bg-opacity-85 transition"
+          className="bg-gray-800 text-white font-dm-sans font-medium px-5 py-2 rounded-md cursor-pointer text-2xl hover:bg-opacity-85 transition"
         >
           Submit Enquiry
         </button>

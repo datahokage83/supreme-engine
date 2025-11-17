@@ -404,13 +404,13 @@ const handleSubmit = async () => {
 
 
 
-        <div className="p-6 md:p-8 border-b border-gray-200 -mb-10 -ml-3">
+        <div className="p-6 md:p-8  -mb-10 -ml-3">
           <h3 className="text-lg font-semibold text-black">Internship Application</h3>
-          <p className="text-sm text-gray-500 -mt-3">Fill in your details to apply for an internship.</p>
+          <p className="text-sm text-gray-500 mt-1 ">Fill in your details to apply for an internship.</p>
         </div>
 
         {/* Scrollable content */}
-        <div className="px-6 md:px-8 py-6 flex-1 space-y-8 -ml-3">
+        <div className="px-6 md:px-8 py-6 flex-1 space-y-8 -ml-3 mt-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 -mt-1">
 
              <div>
@@ -420,7 +420,7 @@ const handleSubmit = async () => {
                 placeholder="Rajesh"
                 value={firstName}
                 onChange={e => handleChange('firstName', e.target.value)}
-                className={`w-11/12 border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-3 py-2 text-sm  font-dm-sans  focus:outline-none focus:ring-2 ${
                   errors.firstName ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                 }`}
               />
@@ -436,7 +436,7 @@ const handleSubmit = async () => {
                 placeholder="Kumar"
                 value={lastName}
                 onChange={(e) => handleChange('lastName', e.target.value)}
-                className={`w-11/12 border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-3 py-2 text-sm font-dm-sans  focus:outline-none focus:ring-2 ${
                   errors.lastName ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                 }`}
               />
@@ -457,7 +457,7 @@ const handleSubmit = async () => {
                   value={phone}
                   maxLength={10}
                   onChange={(e) => handleChange('phone', e.target.value.replace(/\D/g, ""))}
-                  className={`w-full border rounded-r-md pl-2 pr-14 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                  className={`w-11/12 border rounded-r-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                     errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                   }`}
                 />
@@ -474,7 +474,7 @@ const handleSubmit = async () => {
                 value={email}
                 onChange={(e) => handleChange('email',  e.target.value.toLowerCase())}
                 pattern="[a-z0-9._%+-]+@gmail\.com$"
-                className={`w-11/12 border lowercase rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border lowercase rounded-md pl-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                 errors.email ?  ' border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                 }`}
               />
@@ -488,7 +488,7 @@ const handleSubmit = async () => {
               <select
                 value={graduationStatus}
                 onChange={(e) => handleChange('graduationStatus', e.target.value)}
-                className={`w-full border rounded-md py-2 px-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md py-2 px-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                   errors.graduationStatus ? 'border-red-600 focus:ring-red-600' : 'border-gray-400 focus:ring-gray-900'
                 }`}
                 >
@@ -505,7 +505,7 @@ const handleSubmit = async () => {
               <select
                value={practise}
                onChange={(e) => handleChange('practise', e.target.value)}
-                className={`w-full border rounded-md px-2 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-2 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                   errors.practise ? 'border-red-600 focus:ring-red-600' : 'border-gray-400 focus:ring-gray-900'
                 }`}>
                  <option value="">Select Expertise</option>
@@ -532,7 +532,7 @@ const handleSubmit = async () => {
                 placeholder="XYZ University"
                 value={university}
                 onChange={(e) => handleChange('university', e.target.value)}
-                className={`w-11/12 border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                 errors.university ? 'border-red-600 focus:ring-red-600' : 'border-gray-400 focus:ring-gray-900'
                 }`}
                 />
@@ -546,7 +546,7 @@ const handleSubmit = async () => {
                 placeholder="Bengaluru"
                 value={location}
                  onChange={(e) => handleChange('location', e.target.value)}
-                className={`w-11/12 border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-3 py-2  text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                   errors.location ? 'border-red-600 focus:ring-red-600' : 'border-gray-400 focus:ring-gray-900'
                 }`}
               />
@@ -560,7 +560,7 @@ const handleSubmit = async () => {
               <select
                 value={currentYear}
                 onChange={(e) => handleChange('currentYear', e.target.value)}
-                className={`w-full border rounded-md py-2 px-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md py-2 px-2  text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                   errors.currentYear ? 'border-red-600 focus:ring-red-600' : 'border-gray-400 focus:ring-gray-900'
                 }`}>
                 <option value="">Select Year</option>
@@ -574,7 +574,7 @@ const handleSubmit = async () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-black mb-1 text-left ml-1">Batch Year</label>
+              <label className="block text-sm font-medium text-black mb-1.5 text-left ml-1 ">Batch Year</label>
               <input
                 type="number"
                 placeholder="2025"
@@ -583,17 +583,17 @@ const handleSubmit = async () => {
                 max="2099"
                 step="1"
                 onChange={(e) => handleChange('batch', e.target.value)}
-                className={`w-11/12 border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-3 py-2  text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                   errors.batch ? 'border-red-600 focus:ring-red-600' : 'border-gray-400 focus:ring-gray-900'
                 }`}/>
                  {errors.batch && <p className="text-red-600 text-xs mt-1 ml-1 text-left">{errors.batch}</p>}
             </div>
           </div>
 
-          <div>
+          <div >
             <label className="block text-sm font-medium text-black mb-3 text-left ml-1">Upload your Resume</label>
             <div
-              className={`w-12/12 border-2 border-dashed rounded-md p-6 text-center text-sm relative ${
+              className={`w-[100%] border-2 border-dashed rounded-md p-6 text-center text-sm relative ${
                 errors.selectedFile ? 'border-red-600 text-red-600' : 'border-gray-400 text-gray-500'
               }`}
             >
@@ -608,7 +608,7 @@ const handleSubmit = async () => {
                   )}
 
                   <label htmlFor="resumeUpload">
-                    <span className="bg-black text-white px-4 py-2 rounded-md text-sm hover:bg-opacity-85 cursor-pointer">
+                    <span className="bg-black text-white px-4 py-2 rounded-md text-2xl hover:bg-opacity-85 cursor-pointer">
                       Browse Files
                     </span>
                   </label>
@@ -637,13 +637,13 @@ const handleSubmit = async () => {
 
           {/* Description */}
           <div>
-            <label className="block text-sm font-medium text-black mb-1 text-left ml-1">Description</label>
+            <label className="block text-sm font-medium text-black mb-2 text-left ml-1">Description</label>
             <textarea
               rows={3}
               placeholder="Briefly outline your skills, experience, or achievements."
               value={description}
               onChange={(e) => handleChange('description', e.target.value)}
-              className={`w-[97%] border rounded-md px-2 py-4 text-sm font-dm-sans resize-none focus:outline-none focus:ring-2 ${
+              className={`w-[100%] border rounded-md px-2 py-4 text-sm font-dm-sans resize-none focus:outline-none focus:ring-2 ${
                 errors.description ? 'border-red-600 focus:ring-red-600' : 'border-gray-400 focus:ring-gray-900'
               }`}
             />
@@ -654,12 +654,12 @@ const handleSubmit = async () => {
 
         {/* Footer buttons */}
         
-         <div className="max-w-[43.5rem] p-6 border-t border-gray-200 flex justify-between items-center gap-2">
+         <div className="max-w-[48rem] p-6  flex justify-between items-center gap-2">
             {/* Left Side - Close */}
             <button
               type="button"
               onClick={onClose}
-              className="text-sm px-4 py-2 rounded-md border cursor-pointer bg-red-500 text-white border-none hover:bg-opacity-90 font-dm-sans font-medium"
+              className="text-2xl px-4 py-2 rounded-md border cursor-pointer bg-red-600 text-white border-none hover:bg-opacity-90 font-dm-sans font-medium"
             >
               Close
             </button>
@@ -669,14 +669,14 @@ const handleSubmit = async () => {
               <button
                 type="button"
                 onClick={handleReset}
-                className="text-sm px-4 py-2 rounded-md cursor-pointer border border-black hover:bg-gray-100 font-dm-sans font-medium"
+                className="text-2xl px-4 py-2 rounded-md cursor-pointer border border-black hover:bg-gray-100 font-dm-sans font-medium"
               >
                 Reset
               </button>
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="bg-black text-white cursor-pointer text-sm px-4 py-2 rounded-md hover:bg-opacity-85 font-dm-sans font-medium"
+                className="bg-black text-white cursor-pointer text-2xl px-4 py-2 rounded-md hover:bg-opacity-85 font-dm-sans font-medium"
               >
                 Submit
               </button>

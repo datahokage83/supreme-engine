@@ -361,13 +361,13 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
 
 
 
-        <div className="p-6 md:p-8 border-b border-gray-200 -mb-10 -ml-3">
-          <h3 className="text-lg font-semibold text-black">Add Experience</h3>
-          <p className="text-sm text-gray-500 -mt-3">Highlight your previous workplaces on your profile.</p>
+        <div className="p-6 md:p-8  -mb-10 -ml-3">
+          <h3 className="text-lg font-semibold text-black mt-2">Add Experience</h3>
+          <p className="text-sm text-gray-500 mt-2">Highlight your previous workplaces on your profile.</p>
         </div>
 
         {/* Scrollable content */}
-        <div className=" px-6 md:px-8 py-6 flex-1 space-y-8 -ml-3 ">
+        <div className=" px-6 md:px-8 py-6 flex-1 space-y-8 -ml-3 mt-3 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 -mt-1">
 
             <div>
@@ -423,7 +423,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                 placeholder="Rajesh"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
-                className="w-11/12 border border-gray-400 rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 focus:ring-gray-900"
+                className="w-[100%] border border-gray-400 rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 focus:ring-gray-900"
               />
                {errors.firstName && <p className="text-red-600 text-xs mt-1 ml-1 text-left">{errors.firstName}</p>}
             </div>
@@ -435,7 +435,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                 placeholder="Kumar"
                 value={lastName}
                 onChange={(e) => handleChange('lastName', e.target.value)}
-                className={`w-11/12 border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                   errors.lastName ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                 }`}/>
                  {errors.lastName && <p className="text-red-600 text-xs mt-1 ml-1 text-left">{errors.lastName}</p>}
@@ -455,7 +455,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                   value={phone}
                   onChange={(e) => handleChange('phone', e.target.value.replace(/\D/g, ""))}
                   maxLength={10}
-                  className={`w-full border rounded-r-md pl-2 pr-14 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                  className={`w-[90%] border rounded-r-md pl-2 pr-14 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                     errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                   }`}
                 />
@@ -471,7 +471,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                 value={email}
                 onChange={(e) => handleChange('email',  e.target.value.toLowerCase())}
                 pattern="[a-z0-9._%+-]+@gmail\.com$"
-                className={`w-11/12 border lowercase rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border lowercase rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                 errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                 }`}
               />
@@ -486,7 +486,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                 placeholder="3"
                 value={experience}
                 onChange={(e) => handleChange('experience', e.target.value)}
-                className={`w-11/12 border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                 errors.experience ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                 }`}/>
                 {errors.experience && <p className="text-red-600 text-xs mt-1 ml-1 text-left">{errors.experience}</p>}
@@ -500,7 +500,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                 placeholder="Bengaluru"
                 value={location}
                 onChange={(e) => handleChange('location', e.target.value)}
-                className={`w-11/12 border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                 errors.location ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                 }`}
               />
@@ -514,7 +514,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                 placeholder="XYZ University"
                 value={university}
                 onChange={(e) => handleChange('university', e.target.value)}
-                className={`w-11/12 border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                 errors.university ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                 }`}
               />
@@ -531,7 +531,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                 step="1"
                 value={batch}
                 onChange={(e) => handleChange('batch', e.target.value)}
-                className={`w-11/12 border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                 errors.batch ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                 }`}
               />
@@ -545,7 +545,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                 placeholder="Acme Corp"
                 value={organization}
                 onChange={(e) => handleChange('organization', e.target.value)}
-                className={`w-11/12 border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                 errors.organization ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                 }`}
               />
@@ -559,7 +559,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                 placeholder="15 days"
                 value={noticePeriod}
                 onChange={(e) => handleChange('noticePeriod', e.target.value)}
-                className={`w-11/12 border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
+                className={`w-[100%] border rounded-md px-3 py-2 text-sm font-dm-sans focus:outline-none focus:ring-2 ${
                   errors.noticePeriod ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
                 }`}
               />
@@ -587,7 +587,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
                   )}
                  
                   <label htmlFor="resumeUpload">
-                    <span className="bg-black text-white px-4 py-2 rounded-md text-sm hover:bg-opacity-85 cursor-pointer">
+                    <span className="bg-black text-white px-4 py-2 rounded-md text-2xl hover:bg-opacity-85 cursor-pointer">
                       Browse Files
                     </span>
                   </label>
@@ -625,7 +625,7 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
               placeholder="Describe your experience here!"
               value={description}
               onChange={(e) => handleChange('description', e.target.value)}
-              className={`w-[97%] border rounded-md px-2 py-4 text-sm font-dm-sans resize-none focus:outline-none focus:ring-2 ${
+              className={`w-[100%] border rounded-md px-3 py-4 text-sm font-dm-sans resize-none focus:outline-none focus:ring-2 ${
               errors.description ? 'border-red-500 focus:ring-red-500' : 'border-gray-400 focus:ring-gray-900'
               }`}
             />
@@ -636,12 +636,12 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
         </div>
 
         {/* Footer buttons */}
-        <div className="max-w-[43.5rem] p-6 border-t border-gray-200 flex justify-between items-center gap-2">
+        <div className="max-w-[46.5rem] p-6  flex justify-between items-center gap-2">
             {/* Left Side - Close */}
             <button
               type="button"
               onClick={onClose}
-              className="text-sm px-4 py-2 rounded-md border-none bg-red-500 cursor-pointer text-white hover:bg-opacity-90 font-dm-sans font-medium"
+              className="text-sm px-4 py-2 rounded-md border-none bg-red-600 cursor-pointer text-white text-2xl hover:bg-opacity-90 font-dm-sans font-medium"
             >
               Close
             </button>
@@ -651,14 +651,14 @@ export default function ApplicationForm({ onClose }: ApplicationFormProps) {
               <button
                 type="button"
                 onClick={handleReset}
-                className="text-sm px-4 py-2 rounded-md border border-black cursor-pointer hover:bg-gray-100 font-dm-sans font-medium"
+                className="text-sm px-4 py-2 rounded-md border text-2xl border-black cursor-pointer hover:bg-gray-100 font-dm-sans font-medium"
               >
                 Reset
               </button>
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="bg-black text-white text-sm px-4 py-2 rounded-md cursor-pointer hover:bg-opacity-85 font-dm-sans font-medium"
+                className="bg-black text-white text-2xl px-4 py-2 rounded-md cursor-pointer hover:bg-opacity-85 font-dm-sans font-medium"
               >
                 Submit
               </button>

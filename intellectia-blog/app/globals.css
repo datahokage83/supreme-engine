@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@200;300;400;500;600;700&display=swap");
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,6 +21,10 @@ body {
 ::before,
 ::after {
   border-width: 0;
+}
+
+.font-opensans {
+  font-family: 'Open Sans';
 }
 
 .font-inter {
@@ -212,7 +221,7 @@ pre{
     min-height: auto;
   }
   .mdHomeImg {
-    max-width: 1200px;
+    max-width: 850px;
     height: 600px;
   }
 }
@@ -473,3 +482,62 @@ pre{
     font-size: 14px;
   }
 }
+
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* Left side diagonal shape */
+/* .clip-left-diagonal {
+  clip-path: polygon(0 0, 75% 0, 75% 100%, 0% 100%);
+}
+
+.clip-right-diagonal {
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 75% 100%);
+} */
+
+/* Default (mobile/tablet): remove clip paths */
+.clip-left-diagonal,
+.clip-right-diagonal {
+  clip-path: none;
+}
+
+/* Desktop only (from md and up) */
+@media (min-width: 768px) {
+  .clip-left-diagonal {
+    clip-path: polygon(0 0, 75% 0, 95% 100%, 0% 100%);
+  }
+
+  .clip-right-diagonal {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 5% 100%);
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+}
+
+
+/* .clip-diagonal {
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+} */
+
+

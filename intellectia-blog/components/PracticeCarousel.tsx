@@ -75,7 +75,7 @@ const PracticeCarousel: NextPage<PracticeCarouselProps> = ({ className = "", Hom
         ))}
       </Carousel>
 
-      <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-119xlhome font-dm-serif-display px-4 sm:px-6 lg:px-8 xl:px-30 py-4 sm:py-6 lg:py-8 mt-6 lg:mt-0">
+      <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-119xlhome font-dm-serif-display px-4 sm:px-6 lg:px-8 xl:px-30 py-4 sm:py-6 lg:py-8 mt-0 lg:-mt-6">
         <div className="relative mb-6 sm:mb-8">
           {missionLine}
         </div>

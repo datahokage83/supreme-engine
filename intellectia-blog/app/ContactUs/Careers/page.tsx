@@ -106,7 +106,7 @@ export default function CareersHero() {
 
         
           <p className="flex-1 text-white text-base md:text-lg font-normal md:font-medium
-           font-dm-sans mt-3 md:-mt-14  md:ml-0 px-3 text-center tracking-wide">Be part of a firm where
+           font-dm-sans mt-3 md:mt-6  md:ml-0 px-3 text-center tracking-wide">Be part of a firm where
            legal excellence, professional growth, and integrity come together to shape meaningful careers.</p>
        
       </div>
@@ -123,7 +123,7 @@ export default function CareersHero() {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-white bg-white/10 text-white hover:bg-white hover:text-gray-700 transition-colors duration-300"
+              className="w-10 h-10 flex items-center justify-center rounded-full  bg-white/10 text-white hover:bg-white hover:text-gray-700 transition-colors duration-300"
             >
               {item.icon}
             </a>
@@ -159,7 +159,7 @@ export default function CareersHero() {
       <section className="bg-white py-20 md:py-28 px-6 md:px-20 text-center">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
-          <h2 className="text-4xl md:text-20xl font-light font-dm-sans text-black leading-snug">
+          <h2 className="-mt-5 md:mt-0 text-xl md:text-20xl font-light font-dm-sans text-black tracking-wide leading-snug">
             {/* Creating groundbreaking legal solutions starts with you. We need your insight and expertise
             to help shape the future of the legal industry and beyond. */}
             Creating groundbreaking legal solutions starts with the right team.
@@ -168,39 +168,32 @@ export default function CareersHero() {
           </h2>
  
           <div className="max-w-4xl md:max-w-5xl mx-auto">
-          <p className="mt-8  text-xs md:text-lg text-black font-dm-sans leading-relaxed">
-            {/* We aim to achieve excellence—not just for our firm, but for our clients and the
+          <p className="mt-8  text-sm md:text-lg text-black font-dm-sans leading-relaxed">
+            We aim to achieve excellence—not just for our firm, but for our clients and the
             communities we serve, near and far. We do this by honoring diverse perspectives
             and reimagining what’s possible in the practice of law. We bring together 
             experienced attorneys, legal researchers, strategists, and industry specialists
             to craft innovative, practical solutions for today’s—and tomorrow’s—most complex
-            legal challenges. Ready to turn legal insight into meaningful impact? */}
-            At our firm, we combine deep legal expertise with forward-thinking strategies
-            to deliver solutions that stand the test of time. Our strength lies in uniting
-            skilled professionals from diverse disciplines to address today’s challenges 
-            with precision and tomorrow’s opportunities with vision. Choosing to work with 
-            us means aligning with a team that values excellence, integrity, and measurable impact.
+            legal challenges. Ready to turn legal insight into meaningful impact?
           </p>
            </div>
           {/* Button */}
           <div className="mt-10">
-            <Link  href="/ContactUs/Careers/life-at-Intellectia"
-              className="inline-flex items-center justify-center px-10 md:px-8 py-2 md:py-4 border bg-black uppercase no-underline text-white text-['10px'] md:text-sm font-medium font-dm-sans tracking-widest rounded-full hover:bg-[#a2c60f] hover:text-white transition"
+            <Link  href="/ContactUs/Careers/inside-intellectia"
+              className="inline-flex items-center justify-center px-10 md:px-12 py-4 md:py-4  bg-black uppercase no-underline text-white text-sm md:text-lg font-medium font-dm-sans tracking-widest rounded-full hover:bg-[#a2c60f] hover:text-white transition"
             >
-              {/* Browse our latest vacancies */}
-              {/* Why Work With Us */}
-              Experience Our Culture
+             Browse our latest vacancies
             </Link>
           </div>
         </div>
       </section>
 
  
-          <section id="careers" className="relative w-[95%]  md:w-[65%] lg:w-[70%] xl:w-[81%] bg-gray-50 py-6 md:py-14 px-2 md:px-28 lg:px-36 text-center">
+          <section id="careers" className="relative w-[100%]  md:w-[65%] lg:w-[100%]  bg-gray-50 py-6 md:py-14 px-2 md:px-28 lg:px-36 text-center">
           <div>
             {/* Heading & description */}
             <div className="flex flex-col justify-start items-center">
-              <h3 className="text-20xl font-bold font-dm-sans text-gray-900 mb-24 md:mb-10 underline decoration-yellow-300 decoration-4">
+              <h3 className="text-18xl md:text-20xl font-bold font-dm-sans text-gray-900 mb-24 md:mb-10 underline decoration-yellow-300 decoration-4">
                 Career path with Us
               </h3>
 
@@ -212,7 +205,7 @@ export default function CareersHero() {
                 loading="lazy"
               />
 
-              <p className="text-gray-600  md:max-w-5xl text-base md:text-17xl font-snormal font-dm-sans -mt-6 md:mt-4">
+              <p className="text-gray-600  md:max-w-5xl text-base md:text-17xl font-snormal font-dm-sans -mt-6 md:mt-4 mb-10">
                 Discover roles that challenge and inspire. Whether you're starting your journey or 
                 taking the next big step, grow with a team that values innovation and impact.
               </p>
@@ -252,11 +245,11 @@ export default function CareersHero() {
 
         {/* Text Content */}
         <div className="absolute z-10 flex flex-col items-start justify-center top-0 md:top-0 left-5 md:left-10 h-full">
-          <h2 className="text-4xl md:text-20xl font-semibold font-inter text-gray-100 mb-1">
+          <h2 className="text-4xl md:text-19xl font-semibold font-opensans text-gray-100 mb-6">
             Have Questions?
           </h2>
 
-          <p className="text-gray-100 text-sm md:text-17xl font-dm-sans font-normal mb-6">
+          <p className="text-gray-100  text-sm md:text-17xl font-dm-sans font-normal mb-6">
             Discover what it’s like to work here.
           </p>
 
@@ -267,7 +260,7 @@ export default function CareersHero() {
                 "_blank"
               )
             }
-            className="px-6 md:px-12 py-3 md:py-4 -ml-2 mt-0 md:mt-2 bg-black text-gray-100 text-sm md:text-lg cursor-pointer uppercase font-normal font-inter rounded-full hover:bg-[#a2c60f] transition"
+            className="px-6 md:px-16 py-3 md:py-4 -ml-2 mt-0 md:mt-2 bg-black text-gray-100 text-sm md:text-lg cursor-pointer uppercase font-normal font-dm-sans rounded-full hover:bg-[#a2c60f] transition"
           >
             Connect with our Talent team
           </button>

@@ -20,14 +20,13 @@ const Footer = (): JSX.Element => {
 								<br></br>
 								<br></br>
 								<br></br>
-								<br></br>
 				<SocialIcons/>
 				
 				</div>
 			
                 
 
-					<div className="mt-6 px-30 lg:mt-0 lg:flex-1">
+					<div className="mt-10 px-10 md:px-32 lg:mt-4 lg:flex-1">
 						<div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4">
 							<div>
 								<h3 className="text-gray-700 uppercase dark:text-white">About</h3>

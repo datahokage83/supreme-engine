@@ -230,7 +230,8 @@ const links = [
   { href: "/AboutUs", text: "About" },
   { href: "/Blogs", text: "Resources" },
   { href: "/Practices", text: "Practices" },
-  { href: "/ContactUs", text: "Contact Us" },
+  { href: "/Sectors", text: "Sectors" },
+  { href: "/ContactUs", text: "Contact Us" },  
 ];
 
 const Nav: NextPage<NavType> = ({ className = "", logoURL }) => {
@@ -260,7 +261,7 @@ const Nav: NextPage<NavType> = ({ className = "", logoURL }) => {
       {/* Desktop Menu */}
       <div className="w-1/2 self-stretch flex-row items-start justify-between gap-[60px] text-3xl mhidden md1">
         <div className="flex-1 relative">
-          <ul className="flex justify-end py-10 rounded-sm">
+          <ul className="flex justify-end py-12 rounded-sm">
             {links.map((p) => (
               <li className="pr-[2.5rem] li-bulletremove" key={p.href}>
                 {isClient ? (

@@ -174,7 +174,7 @@ export default function FloatingDock() {
               className={`px-3 py-1.5 rounded-full transition-all duration-300 ${
                 activeSection === sec.id
                   ? "bg-gray-800 text-white no-underline"
-                  : "text-gray-300 text-white no-underline"
+                  : "text-gray-300  no-underline"
               }`}
             >
               {sec.label}

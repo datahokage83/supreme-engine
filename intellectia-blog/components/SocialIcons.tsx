@@ -5,7 +5,7 @@ import { faFacebookF, faTwitter, faLinkedinIn, faInstagram } from '@fortawesome/
 
 const SocialIcons: React.FC = () => {
     return (
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 ml-24 md:ml-0">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white-600 hover:text-white-800">
                 <FontAwesomeIcon icon={faFacebookF} className='h-5 w-5' />
             </a>

@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "sectors_videos",
+  "info": {
+    "singularName": "sectors-video",
+    "pluralName": "sectors-videos",
+    "displayName": "SectorsVideo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SecVideos": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

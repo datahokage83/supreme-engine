@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_areas",
+  "info": {
+    "singularName": "sub-area",
+    "pluralName": "sub-areas",
+    "displayName": "SubArea",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SubAreaImg": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SubAreaName": {
+      "type": "string"
+    },
+    "SubAreaDesc": {
+      "type": "text"
+    },
+    "SubAreaSlug": {
+      "type": "string"
+    },
+    "SubAreaCategory": {
+      "type": "string"
+    },
+    "sub_area_key_contacts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::team-member.team-member",
+      "inversedBy": "sub_areas"
+    }
+  }
+}

@@ -214,6 +214,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocation } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import CarouselNew from "@/components/CarouselNew";
+import ServicesSection from "@/components/ServicesSection";
+import ConsultationCTA from "@/components/ConsultationCTA";
+import Testimonials from "@/components/Testimonials";
 
 // ✅ Improved fetch wrapper
 async function getStrapiData(url: string) {
@@ -294,7 +297,7 @@ const Home: NextPage = async () => {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-semibold no-underline text-xs sm:text-sm uppercase tracking-wide">
+              <span className="font-dm-sans font-semibold no-underline text-xs sm:text-sm uppercase  tracking-wide">
                 Find Us
               </span>
               <span className="text-xs opacity-90 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block">
@@ -320,17 +323,25 @@ const Home: NextPage = async () => {
         </Link>
       </div>
 
-      <Mission missionLine={description} />
+      {/* <Mission missionLine={description} />
 
-      <Divider />
+      <Divider /> */}
 
-      <div className="flex justify-center px-4 sm:px-6 lg:px-8">
+       <ServicesSection/>
+       <Testimonials/>
+       <ConsultationCTA/>
+
+
+      {/* <div className="flex justify-center px-4 sm:px-6 lg:px-8">
         {strapiBlogData?.data ? (
           <CarouselNew BlogPosts={strapiBlogData.data} />
         ) : (
           <p>No blog posts found.</p>
         )}
-      </div>
+      </div> */}
+
+      
+
 
       <Footer />
     </>

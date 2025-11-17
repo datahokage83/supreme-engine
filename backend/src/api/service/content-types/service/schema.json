@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "serviceTitle": {
+      "type": "string"
+    },
+    "serviceDesc": {
+      "type": "text"
+    },
+    "serviceImg": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "practice_area": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::practice-area.practice-area"
+    }
+  }
+}

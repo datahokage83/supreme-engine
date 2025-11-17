@@ -101,7 +101,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
             </div>
 
             {/* Info Section */}
-            <div className="bg-gray-400 h-[280px] flex-1 px-10 py-8 text-white flex flex-col justify-center -mt-4 md:mt-16">
+            <div className="bg-gray-400 h-[280px] flex-1 px-10 py-8 flex flex-col justify-center -mt-4 md:mt-16">
               <div className="flex flex-row items-center text-gray-800">
                 <h1 className="text-19xl font-bold font-dm-sans">
                   {member.attributes.TeamMemberName}

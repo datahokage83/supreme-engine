@@ -509,12 +509,12 @@ const ContactUs: NextPage<ContactContainerType> = () => {
       {/* Contact Info + Form */}
       <div className="relative flex flex-col md:flex-col lg:flex-row bg-white rounded-sm p-6 md:p-12 font-dm-sans z-10 gap-8">
         {/* Contact Info */}
-        <div className="lg:w-2/5 bg-white ml-1 p-6 rounded-md border border-gray-200">
+        <div className="lg:w-2/5 bg-white ml-1 p-6">
           <div className="px-0 md:px-5">
             <h2 className="text-xl font-semibold mb-4 text-[#b43a2f]">
               Contact Info
             </h2>
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-3 mb-6">
               <a
                 href="https://www.google.com/maps/place/Intelectia+Legal+Firm/@12.961518,77.5951297,17z/data=!4m8!3m7!1s0x3bae15d13a793489:0xe5f93f75c0c87a66!8m2!3d12.961518!4d77.5951297"
                 target="_blank"
@@ -528,7 +528,7 @@ const ContactUs: NextPage<ContactContainerType> = () => {
                 </p>
               </a>
             </div>
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-3 mb-6">
               <a
                 href="tel:+919845097323"
                 className="flex items-center gap-3 text-gray-700 no-underline"
@@ -552,9 +552,9 @@ const ContactUs: NextPage<ContactContainerType> = () => {
         </div>
 
         {/* Form */}
-        <div className="ml-3 md:ml-10 mt-0 md:-mt-56 md:w-2.5/5 bg-gray-50 p-6 md:p-14 rounded-sm shadow-md">
+        <div className="ml-3 md:ml-20 mt-0 md:-mt-56 md:w-2.5/5 bg-gray-50 p-6 md:p-14 rounded-sm shadow-md">
           <div className="text-center mb-8">
-            <h2 className="text-xl md:text-4xl font-semibold text-[#0a4d6e] mb-2">
+            <h2 className="text-xl md:text-xl font-semibold text-[#0a4d6e] mb-2">
               Your Goals, Our Mission &ndash; Let's Connect
             </h2>
             <p className="text-gray-600 text-sm md:text-base">
@@ -563,10 +563,10 @@ const ContactUs: NextPage<ContactContainerType> = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-7 mt-3 -ml-2">
+          <form onSubmit={handleSubmit} className="space-y-7 mt-3 ml-3">
             <div className="grid grid-cols-1 gap-6">
               <div>
-                <label className="block text-sm font-medium mb-1 -ml-2">
+                <label className="block text-md font-medium mb-2 -ml-2">
                   Enter your name
                 </label>
                 <input
@@ -574,7 +574,7 @@ const ContactUs: NextPage<ContactContainerType> = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full border font-dm-sans border-gray-400 rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-[#b43a2f] -ml-2"
+                  className="w-[100%] border font-dm-sans border-gray-400 rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-[#b43a2f] -ml-2"
                 />
                 {errors.name && (
                   <p className="text-red-500 text-sm mt-1">{errors.name}</p>
@@ -582,7 +582,7 @@ const ContactUs: NextPage<ContactContainerType> = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-1 -ml-2">
+                <label className="block text-md font-medium mb-2 -ml-2">
                   Enter your email
                 </label>
                 <input
@@ -590,7 +590,7 @@ const ContactUs: NextPage<ContactContainerType> = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full border font-dm-sans border-gray-400 rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-[#b43a2f] -ml-2"
+                  className="w-[100%] border font-dm-sans border-gray-400 rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-[#b43a2f] -ml-2"
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -599,7 +599,7 @@ const ContactUs: NextPage<ContactContainerType> = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1 -ml-2">
+              <label className="block text-md font-medium mb-2 -ml-2">
                 Enter your message
               </label>
               <textarea
@@ -607,7 +607,7 @@ const ContactUs: NextPage<ContactContainerType> = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full border font-dm-sans border-gray-400 rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-[#b43a2f] -ml-2"
+                className="w-[100%] border font-dm-sans border-gray-400 rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-[#b43a2f] -ml-2"
               />
               {errors.message && (
                 <p className="text-red-500 text-sm mt-1">{errors.message}</p>
@@ -617,7 +617,7 @@ const ContactUs: NextPage<ContactContainerType> = () => {
             <div className="-mx-3">
               <button
                 type="submit"
-                className="w-full bg-[#b43a2f] text-white cursor-pointer font-semibold py-3 ml-1 rounded-sm hover:bg-[#a13328] transition"
+                className="w-[96%] bg-[#b43a2f] text-white cursor-pointer font-dm-sans font-semibold py-3 ml-1 rounded-sm hover:bg-[#a13328] transition"
               >
                 SUBMIT
               </button>
@@ -633,7 +633,7 @@ const ContactUs: NextPage<ContactContainerType> = () => {
         
 
 
-      <div className="bg-gray-100 py-6">
+      <div className="bg-gray-100 py-8">
         <div className="max-w-6xl mx-auto">
           <CareerSection />
         </div>

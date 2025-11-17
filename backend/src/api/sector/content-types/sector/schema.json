@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sectors",
+  "info": {
+    "singularName": "sector",
+    "pluralName": "sectors",
+    "displayName": "Sector",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SectorTag": {
+      "type": "string"
+    },
+    "SectorImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SectorTitle": {
+      "type": "text"
+    },
+    "sectorslug": {
+      "type": "string"
+    },
+    "SectorDesc": {
+      "type": "text"
+    },
+    "team_members": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::team-member.team-member",
+      "inversedBy": "sectors"
+    }
+  }
+}

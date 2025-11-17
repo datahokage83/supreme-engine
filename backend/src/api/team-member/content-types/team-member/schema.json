@@ -77,6 +77,24 @@
         "videos",
         "audios"
       ]
+    },
+    "Teampracticeareas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::practice-area.practice-area",
+      "inversedBy": "team_members"
+    },
+    "sub_areas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sub-area.sub-area",
+      "mappedBy": "sub_area_key_contacts"
+    },
+    "sectors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sector.sector",
+      "mappedBy": "team_members"
     }
   }
 }

@@ -29,14 +29,14 @@ export default function CareersSection() {
     <section className="py-12 px-7 font-dm-sans text-[#1a1a1a] relative">
       <div className="max-w-5xl mx-auto">
         
-        <div className="mb-5">
+        <div className="mb-6">
           <button className="inline-flex text-sm border font-dm-sans border-black rounded-full px-10 py-3 font-bold hover:bg-black hover:text-white transition -ml-1">
             We're hiring!
           </button>
 
 
-          <h1 className="text-21xl font-semibold">Be part of our mission</h1>
-          <p className="text-black -mt-3 font-medium">
+          <h1 className="text-20xl mt-6 font-semibold">Be part of our mission</h1>
+          <p className="text-black mt-5 font-medium text-lg mb-5">
             We're looking for passionate people to join us on our mission.
           </p>
         </div>
@@ -44,10 +44,10 @@ export default function CareersSection() {
         {/* Job Cards */}
         {jobItems.map((job, idx) => (
           <div key={idx}>
-            <div className="border-t py-6 flex justify-between items-start flex-wrap gap-4">
+            <div className="border-t-2 py-6 flex justify-between items-start flex-wrap gap-4 mt-2">
               <div>
-                <h2 className="text-lg font-semibold">{job.title}</h2>
-                <p className="text-sm text-gray-600 mb-3">{job.desc}</p>
+                <h2 className="text-lgx font-semibold mb-2">{job.title}</h2>
+                <p className="text-md text-gray-600 mb-3">{job.desc}</p>
                 <div className="flex gap-2 text-sm flex-wrap">
                   {/* {job.tags.map((tag, tagIdx) => (
                     <button
@@ -91,7 +91,7 @@ export default function CareersSection() {
             {/* Divider */}
             {idx < jobItems.length - 1 && (
               <div className="mt-4 mb-4">
-                <div className="w-full h-px sm:h-0.5 bg-black" />
+                {/* <div className="w-full h-px sm:h-0.5 bg-black" /> */}
               </div>
             )}
           </div>

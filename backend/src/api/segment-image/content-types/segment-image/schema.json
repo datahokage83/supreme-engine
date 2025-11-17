@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "segment_images",
+  "info": {
+    "singularName": "segment-image",
+    "pluralName": "segment-images",
+    "displayName": "SegmentImage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SegCTAImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

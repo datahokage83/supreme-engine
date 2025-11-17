@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_description_descs",
+  "info": {
+    "displayName": "desc",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "desc": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -867,43 +867,6 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
   };
 }
 
-export interface ApiAuthorAuthor extends Schema.CollectionType {
-  collectionName: 'authors';
-  info: {
-    singularName: 'author';
-    pluralName: 'authors';
-    displayName: 'author';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    avatar: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    posts: Attribute.Relation<
-      'api::author.author',
-      'oneToMany',
-      'api::post.post'
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::author.author',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::author.author',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiContactContact extends Schema.CollectionType {
   collectionName: 'contacts';
   info: {
@@ -1044,6 +1007,36 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
   };
 }
 
+export interface ApiImageSectionImageSection extends Schema.SingleType {
+  collectionName: 'image_sections';
+  info: {
+    singularName: 'image-section';
+    pluralName: 'image-sections';
+    displayName: 'ImageSection';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::image-section.image-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::image-section.image-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiIntershipApplicationIntershipApplication
   extends Schema.CollectionType {
   collectionName: 'intership_applications';
@@ -1170,40 +1163,33 @@ export interface ApiJobApplicationJobApplication extends Schema.CollectionType {
   };
 }
 
-export interface ApiLifeAtIntellectiaLifeAtIntellectia
-  extends Schema.SingleType {
-  collectionName: 'life_at_intellectias';
+export interface ApiJobListingJobListing extends Schema.CollectionType {
+  collectionName: 'job_listings';
   info: {
-    singularName: 'life-at-intellectia';
-    pluralName: 'life-at-intellectias';
-    displayName: 'Life-at-Intellectia';
+    singularName: 'job-listing';
+    pluralName: 'job-listings';
+    displayName: 'JobListing';
     description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Image1: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    Image2: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    Image3: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    Image4: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    Image5: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    Image6: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    Image9: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    Image7: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    Image8: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    Image10: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    role: Attribute.String;
+    company: Attribute.String;
+    location: Attribute.String;
+    description: Attribute.Component<'description.desc', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::life-at-intellectia.life-at-intellectia',
+      'api::job-listing.job-listing',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::life-at-intellectia.life-at-intellectia',
+      'api::job-listing.job-listing',
       'oneToOne',
       'admin::user'
     > &
@@ -1227,11 +1213,6 @@ export interface ApiPostPost extends Schema.CollectionType {
     content: Attribute.Blocks;
     cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     slug: Attribute.UID<'api::post.post', 'title'>;
-    author: Attribute.Relation<
-      'api::post.post',
-      'manyToOne',
-      'api::author.author'
-    >;
     ShortDesc: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1260,6 +1241,13 @@ export interface ApiPracticeAreaPracticeArea extends Schema.CollectionType {
       'images' | 'files' | 'videos' | 'audios'
     >;
     Description: Attribute.Text;
+    slug: Attribute.String;
+    quote: Attribute.Text;
+    team_members: Attribute.Relation<
+      'api::practice-area.practice-area',
+      'manyToMany',
+      'api::team-member.team-member'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1271,6 +1259,222 @@ export interface ApiPracticeAreaPracticeArea extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::practice-area.practice-area',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSectorSector extends Schema.CollectionType {
+  collectionName: 'sectors';
+  info: {
+    singularName: 'sector';
+    pluralName: 'sectors';
+    displayName: 'Sector';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    SectorTag: Attribute.String;
+    SectorImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    SectorTitle: Attribute.Text;
+    sectorslug: Attribute.String;
+    SectorDesc: Attribute.Text;
+    team_members: Attribute.Relation<
+      'api::sector.sector',
+      'manyToMany',
+      'api::team-member.team-member'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sector.sector',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sector.sector',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSectorsVideoSectorsVideo extends Schema.SingleType {
+  collectionName: 'sectors_videos';
+  info: {
+    singularName: 'sectors-video';
+    pluralName: 'sectors-videos';
+    displayName: 'SectorsVideo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    SecVideos: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sectors-video.sectors-video',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sectors-video.sectors-video',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSegmentSegment extends Schema.CollectionType {
+  collectionName: 'segments';
+  info: {
+    singularName: 'segment';
+    pluralName: 'segments';
+    displayName: 'Segment';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    SegmentName: Attribute.String;
+    SegmentDesc: Attribute.Text;
+    SegmentImage: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    SegmentSlug: Attribute.String;
+    SegmentCategory: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::segment.segment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::segment.segment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSegmentImageSegmentImage extends Schema.SingleType {
+  collectionName: 'segment_images';
+  info: {
+    singularName: 'segment-image';
+    pluralName: 'segment-images';
+    displayName: 'SegmentImage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    SegCTAImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::segment-image.segment-image',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::segment-image.segment-image',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiServiceService extends Schema.CollectionType {
+  collectionName: 'services';
+  info: {
+    singularName: 'service';
+    pluralName: 'services';
+    displayName: 'Service';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    serviceTitle: Attribute.String;
+    serviceDesc: Attribute.Text;
+    serviceImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    practice_area: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'api::practice-area.practice-area'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSubAreaSubArea extends Schema.CollectionType {
+  collectionName: 'sub_areas';
+  info: {
+    singularName: 'sub-area';
+    pluralName: 'sub-areas';
+    displayName: 'SubArea';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    SubAreaImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    SubAreaName: Attribute.String;
+    SubAreaDesc: Attribute.Text;
+    SubAreaSlug: Attribute.String;
+    SubAreaCategory: Attribute.String;
+    sub_area_key_contacts: Attribute.Relation<
+      'api::sub-area.sub-area',
+      'manyToMany',
+      'api::team-member.team-member'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sub-area.sub-area',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sub-area.sub-area',
       'oneToOne',
       'admin::user'
     > &
@@ -1338,6 +1542,21 @@ export interface ApiTeamMemberTeamMember extends Schema.CollectionType {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    Teampracticeareas: Attribute.Relation<
+      'api::team-member.team-member',
+      'manyToMany',
+      'api::practice-area.practice-area'
+    >;
+    sub_areas: Attribute.Relation<
+      'api::team-member.team-member',
+      'manyToMany',
+      'api::sub-area.sub-area'
+    >;
+    sectors: Attribute.Relation<
+      'api::team-member.team-member',
+      'manyToMany',
+      'api::sector.sector'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1349,6 +1568,41 @@ export interface ApiTeamMemberTeamMember extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::team-member.team-member',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTestimonialTestimonial extends Schema.CollectionType {
+  collectionName: 'testimonials';
+  info: {
+    singularName: 'testimonial';
+    pluralName: 'testimonials';
+    displayName: 'Testimonial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    num: Attribute.String;
+    name: Attribute.String;
+    text: Attribute.String;
+    role: Attribute.String;
+    company: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::testimonial.testimonial',
       'oneToOne',
       'admin::user'
     > &
@@ -1376,18 +1630,25 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
-      'api::author.author': ApiAuthorAuthor;
       'api::contact.contact': ApiContactContact;
       'api::enquiry.enquiry': ApiEnquiryEnquiry;
       'api::faq.faq': ApiFaqFaq;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::image-section.image-section': ApiImageSectionImageSection;
       'api::intership-application.intership-application': ApiIntershipApplicationIntershipApplication;
       'api::job-application.job-application': ApiJobApplicationJobApplication;
-      'api::life-at-intellectia.life-at-intellectia': ApiLifeAtIntellectiaLifeAtIntellectia;
+      'api::job-listing.job-listing': ApiJobListingJobListing;
       'api::post.post': ApiPostPost;
       'api::practice-area.practice-area': ApiPracticeAreaPracticeArea;
+      'api::sector.sector': ApiSectorSector;
+      'api::sectors-video.sectors-video': ApiSectorsVideoSectorsVideo;
+      'api::segment.segment': ApiSegmentSegment;
+      'api::segment-image.segment-image': ApiSegmentImageSegmentImage;
+      'api::service.service': ApiServiceService;
+      'api::sub-area.sub-area': ApiSubAreaSubArea;
       'api::team.team': ApiTeamTeam;
       'api::team-member.team-member': ApiTeamMemberTeamMember;
+      'api::testimonial.testimonial': ApiTestimonialTestimonial;
     }
   }
 }

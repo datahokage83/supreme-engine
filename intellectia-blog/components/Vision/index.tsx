@@ -1,6 +1,6 @@
 const Vision = (): JSX.Element => {
 	return (
-		<div className="flex flex-col text-center w-full mb-20 mdN">
+		<div className="flex flex-col text-center w-full py-14 mb-20 mdN">
 			{/* <div className="container p-4 mx-auto text-center">
 				<h2 className="text-4xl dark:text-black mt-8 font-dm-sans">Vision</h2>
 			</div> */}
@@ -23,7 +23,7 @@ const Vision = (): JSX.Element => {
 							Management Consulting, Legal Advisory and Compliance Management.
 						</p>
 						<span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-						<h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
+						<h2 className="text-gray-900 font-normal title-font tracking-wider text-xl italic">
 							Intellectia
 						</h2>
 						{/* <p className="text-gray-500">Senior Product Designer</p> */}

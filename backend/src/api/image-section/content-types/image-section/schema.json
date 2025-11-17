@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "image_sections",
+  "info": {
+    "singularName": "image-section",
+    "pluralName": "image-sections",
+    "displayName": "ImageSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

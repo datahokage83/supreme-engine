@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "segments",
+  "info": {
+    "singularName": "segment",
+    "pluralName": "segments",
+    "displayName": "Segment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SegmentName": {
+      "type": "string"
+    },
+    "SegmentDesc": {
+      "type": "text"
+    },
+    "SegmentImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SegmentSlug": {
+      "type": "string"
+    },
+    "SegmentCategory": {
+      "type": "string"
+    }
+  }
+}

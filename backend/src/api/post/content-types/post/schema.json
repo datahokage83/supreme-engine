@@ -33,12 +33,6 @@
       "type": "uid",
       "targetField": "title"
     },
-    "author": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::author.author",
-      "inversedBy": "posts"
-    },
     "ShortDesc": {
       "type": "text"
     }
